@@ -1,0 +1,126 @@
+  html, body {
+        margin: 0px;
+        padding: 0px;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    div#layoutObj {
+        position: relative;
+        margin-top: 10px;
+        margin-left: 0px;
+        width: auto;
+        height: 100%;
+    }
+
+    .dhx_cal_event_cont_selected {
+        background-color: #9cc1db;
+        color: white;
+    }
+
+    .dhx_scale_hour_main {
+        float: left;
+        text-align: right;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .dhx_scale_hour_minute_cont {
+        float: left;
+        position: relative;
+        text-align: right;
+    }
+
+    .dhx_scale_hour_minute_top, .dhx_scale_hour_minute_bottom {
+        font-size: 10px;
+        padding-right: 5px;
+    }
+
+    .dhx_scale_hour_sep {
+        position: absolute;
+        height: 1px;
+        background-color: #8C929A;
+        right: 0;
+        top: 20px;
+        width: 20px;
+    }
+
+
+    .dhx_cal_header .dhx_scale_bar {
+        font-size: 13px;
+        color: #000000;
+    }
+
+    .dhx_cal_event .dhx_body {
+        -webkit-transition: opacity 0.1s;
+        transition: opacity 0.1s;
+        opacity: 0.7;
+    }
+
+    .dhx_cal_event .dhx_title {
+        line-height: 12px;
+    }
+
+    .dhx_cal_event_line:hover,
+    .dhx_cal_event:hover .dhx_body,
+    .dhx_cal_event.selected .dhx_body,
+    .dhx_cal_event.dhx_cal_select_menu .dhx_body {
+        opacity: 1;
+    }
+
+
+    .dhx_cal_event.event_past div, .dhx_cal_event_line.event_past {
+        background-color: #747473 !important;
+        color: white !important;
+    }
+
+    .dhx_cal_event_clear.event_past {
+        color: #747473 !important;
+    }
+
+    .one_line {
+        white-space: nowrap;
+        overflow: hidden;
+        padding-top: 5px;
+        padding-left: 5px;
+        text-align: left !important;
+    }
+
+
+   /*-----------------事件颜色---------------------*/
+
+    .dhx_cal_event div.dhx_footer,
+    .dhx_cal_event.past_event div.dhx_footer,
+    .dhx_cal_event.event_past div.dhx_footer,
+    .dhx_cal_event.event_r1 div.dhx_footer,
+    .dhx_cal_event.event_r2 div.dhx_footer,
+    .dhx_cal_event.event_r3 div.dhx_footer {
+        background-color: transparent !important;
+    }
+
+      .dhx_cal_event.event_r2 div, .dhx_cal_event_line.event_r2 {
+        background-color: orange !important;
+        border-color: #a36800 !important;
+    }
+
+    .dhx_cal_event_clear.event_r2 {
+        color: orange !important;
+    }
+
+    .dhx_cal_event.event_r3 div, .dhx_cal_event_line.event_r3 {
+        background-color: #36BD14 !important;
+        border-color: #698490 !important;
+    }
+
+    .dhx_cal_event_clear.event_r3 {
+        color: #36BD14 !important;
+    }
+
+    .dhx_cal_event.event_r1 div, .dhx_cal_event_line.event_r1 {
+        background-color: #FC5BD5 !important;
+        border-color: #839595 !important;
+    }
+
+    .dhx_cal_event_clear.event_r1 {
+        color: #B82594 !important;
+    }
