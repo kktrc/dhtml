@@ -4411,7 +4411,7 @@ scheduler._calc_event_y = function(ev, min_height){
 //渲染数据到界面上
 scheduler.render_event = function(ev) {
 	var menu = scheduler.xy.menu_width;
-	var menu_offset = (this.config.use_select_menu_space) ? 0 : menu;
+	var menu_offset = (this.config.use_select_menu_space) ? 0 : menu;//菜单偏移值
 	if (ev._sday < 0) return; //can occur in case of recurring event during time shift
 
 	var parent = scheduler.locate_holder(ev._sday);	
@@ -4499,10 +4499,14 @@ scheduler.render_event = function(ev) {
 		this.highlightEventPosition(ev);
 	}
 };
+
+//渲染到界面上，生成DIV
 scheduler._render_v_bar = function (ev, x, y, w, h, style, contentA, contentB, bottom) {
+
+  //创建DIV
 	var d = document.createElement("DIV");
-	var id = ev.id;
-	var cs = (bottom) ? "dhx_cal_event dhx_cal_select_menu" : "dhx_cal_event";
+	var id = ev.id; //拿到ID
+	var cs = (bottom) ? "dhx_cal_event dhx_cal_select_menu" : "dhx_cal_event"; //class
 
 	var cse = scheduler.templates.event_class(ev.start_date, ev.end_date, ev);
 	if (cse) cs = cs + " " + cse;
